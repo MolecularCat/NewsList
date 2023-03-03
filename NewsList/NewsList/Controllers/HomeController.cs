@@ -36,7 +36,9 @@ namespace NewsList.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var items = GetNews();
+
+            return View(items);
         }
 
         public IActionResult Privacy()
